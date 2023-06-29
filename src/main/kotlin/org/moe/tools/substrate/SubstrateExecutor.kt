@@ -64,7 +64,7 @@ class SubstrateExecutor(
                 "-Dmoe.platform.name=${config.target.os}",
 
                 "-H:TempDirectory=${config.outputDir.toAbsolutePath()}",
-                "-H:+UseCAPCache",
+                "-H:+NewCAPCache",
                 "-H:CAPCacheDir=${ensureCapCacheDir()}",
                 "--no-server",
                 *config.customOptions.toTypedArray(),
